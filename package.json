@@ -1,0 +1,32 @@
+{
+  "author": "Chris Joel <chris@scriptolo.gy> (http://scriptolo.gy)",
+  "name": "handlebars-amd",
+  "description": "Compiles handlebars templates into an AMD-compatible module.",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cdata/handlebars.git"
+  },
+  "bin": {
+    "handlebars-amd": "./bin/handlebars-amd"
+  },
+  "main": "./lib/handlebars-amd.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "optimist" : "~0.3",
+    "handlebars" : "~1.0",
+    "q" : "*",
+    "q-fs" : "*",
+    "uglify-js" : "*"
+  },
+  "devDependencies": {
+    "mocha" : "~1.0",
+    "expect.js" : "~0.1"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": "~0.6"
+  }
+}

@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+
+var argv = require('optimist')
+    .usage('$0 -i <templateDirectory> [-n <moduleName>] [-m]')
+    .alias({
+        'i' : 'input'
+      , 'n' : 'module-name'
+      , 'm' : 'minify'
+    })
+    .default({
+        'm' : false
+    })
+    .describe({
+        '?' : 'Show this usage information.'
+      , 'i' : 'The directory containing templates to compile.'
+      , 'n' : 'The name of the AMD module. Module is anonymous if not provided.'
+      , 'm' : 'Enable minification of the resulting module.'
+    }).demand(['i']).argv;
+
+if(argv['?']) {
+    optimist.showHelp();
+    process.exit(0);
+}
+    
+require('../lib/handlebars-amd').compile(argv.i, argv.n, argv.m).then(function(output) {
+
+    process.stdout.write(output);
+});
