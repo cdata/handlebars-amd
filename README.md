@@ -1,6 +1,16 @@
 # Handlebars AMD
 
-Handlebars is a cool template system that allows you to precompile your templates in JavaScript for great performance. One thing that Handlebars could stand to play nicely with is AMD module loaders (like RequireJS and CloudFlareJS). This node module allows you to compile entire directories of Handlebars templates (recursively) into a named AMD module.
+Handlebars is a cool template system that allows you to precompile your templates as JavaScript for great performance. One thing that Handlebars could stand to play nicely with is AMD module loaders (like RequireJS and CloudFlareJS). This node module allows you to compile entire directories of Handlebars templates (recursively) into a named AMD module.
+
+## Installing
+
+```sh
+# For command line:
+npm install -g handlebars-amd
+
+# For Node apps:
+npm install handlebars-amd
+```
 
 ## Usage
 
